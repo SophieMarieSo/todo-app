@@ -5,7 +5,7 @@ import Todo from '../Todo/Todo';
 export default function TodoList() {
   const [todos, setTodos] = useState([
     { id: '1', text: 'studying', status: 'active' },
-    { id: '2', text: 'cleaning', status: 'active' },
+    { id: '2', text: 'cleaning', status: 'completed' },
   ]);
 
   const handleAdd = (todo) => setTodos([...todos, todo]);

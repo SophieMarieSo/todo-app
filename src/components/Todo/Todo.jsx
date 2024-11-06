@@ -9,6 +9,8 @@ export default function Todo({ todo, onUpdate, onDelete }) {
     onUpdate({ ...todo, status });
   };
 
+  const handleDelete = () => onDelete(todo);
+
   return (
     <li>
       <input
@@ -18,7 +20,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
         onChange={handleChange}
       />
       <label htmlFor='checkbox'>{text}</label>
-      <button>
+      <button onClick={handleDelete}>
         <FaTrashAlt />
       </button>
     </li>
